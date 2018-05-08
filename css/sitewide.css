@@ -1,0 +1,401 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/* 
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;		
+}
+*/
+
+/*font-family: 'Share Tech', sans-serif;
+font-family: 'Archivo Black', sans-serif;
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+body {
+	font-family: 'Share Tech', sans-serif;	
+	font-size: 15px;
+	line-height: 1.5em;
+	color: white;
+	text-align: center;
+	font: white;
+	background-color: black;
+}
+
+h1{
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 7em;
+	line-height: 0.9em;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 10px;
+	text-align: center;
+	grid-column: 2/3;
+}
+
+.main a{
+	text-decoration: none;
+	color: white;
+}
+
+.main a:hover{
+	color: #E02E05;
+}
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area. 
+	If you have more than one container, you are probably doing
+	something wrong. 	
+*/
+.container {
+	margin-top: 2em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	width: 70%;
+	max-width: 1200px;
+	padding: 1em;
+	display: grid;
+	grid-template-columns: 100px 100px auto;
+}
+.container a{
+	text-decoration: none;
+	color: white;
+	padding: 3px 4px 3px 8px;
+	display: block;
+}
+.container a:hover{
+	color: #E02E05;
+}
+.container h1{
+	text-align: right;
+	grid-column: 3/4;
+
+}
+.container p{
+	text-align: right;
+	line-height: 2em;
+	margin: 0.2em;
+	padding: 5px;
+}
+
+
+/*.navbar{
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+}
+
+.navbar a{
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding-left: 1em;
+	padding-top: 13px;
+	padding-bottom: 16px;
+	text-decoration: none;
+	font-size: 2em;
+}
+
+.navbar a:hover{
+	color: #E02E05;
+}
+*/
+.sidenav{
+	grid-column: 1/2;
+	width: 130px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	margin-top: 8em;
+	margin-left: 5em;
+	padding: 2em;
+}
+
+
+.sidenav a{
+	padding: auto;
+	text-decoration: none;
+	font-size: 2em;
+	color: white;
+	display: block;
+	text-align: left;
+	line-height: 1em;
+}
+
+.sidenav a:hover{
+	color: #E02E05;
+}
+		
+/*----TOPICS-----*/
+
+.topics h2{
+		font-size: 6em;
+		line-height: 0.9em;
+		color: white;
+		margin-top: 1em;
+		margin-bottom: 10px;
+		text-align: center;
+		grid-column: 2/3;
+		display: block;
+			}
+
+.topics a{
+	text-decoration: none;
+	color: white;
+}
+
+.topiclist{
+	display: grid;
+	grid-template-columns: 200px auto auto;
+}
+
+.topiclist p{
+	line-height: 1em;
+	margin: 10px;
+	text-align: right;
+}
+.topiclist h1{
+	text-align: right;
+}
+
+
+.speaker{
+	display: grid;
+	grid-template-columns: 250px auto;
+
+}
+.speaker a{
+	grid-column: 3/4;
+	font-size: 2em;
+	line-height: 0.8em;
+	text-align: right;
+	color: #E02E05;
+}
+
+.speaker a:hover{
+	color: white;
+}
+
+.speaker p{
+	line-height: 1em;
+	margin: 5px;
+	text-align: right;
+}
+
+.speaker h1{
+	grid-column: 2/4;
+	text-align: right;
+}
+
+.email{
+	display: grid;
+	grid-template-columns: 200px auto auto;
+} 
+.email h3{
+	grid-column: 3/4;
+	font-size: 2em;
+	line-height: 0.8em;
+	text-align: right;
+	color: #E02E05;
+}
+
+.email p{
+	grid-column: 3/4;
+	font-size: 2em;
+	line-height: 0.8em;
+	margin: 10px;
+	text-align: right;
+	color: white;
+}
+.img{
+	height: 80%;
+	width: 80%;
+}
+
+/*--------VENUE PAGE ------*/
+.venue{
+	display:grid;
+	grid-template-columns: 400px auto auto;
+}
+.venue h1{
+	grid-column: 2/4;
+	text-align: right;
+}
+.venue h2{
+	grid-column: 1/4;
+	text-align: right;
+	margin-bottom: -40px;
+}
+.venue h3{
+	grid-column: 1/4;
+	font-size: 2em;
+	line-height: 0.9em;
+	text-align: right;
+	color: white;
+	margin-bottom: 10px;
+	margin-top: -20px;
+}
+.venue a{
+	text-align: right;
+	color: #E02E05;
+}
+.venue a:hover{
+	color: white;
+}
+
+.map{
+	filter: grayscale(70%);
+	position: relative;
+	top: 30em;
+	left: 7em;
+	margin-bottom: 30px;
+}
+
+
+.aboutinfo{
+	display: grid;
+	grid-template-columns: 300px auto auto;
+}
+
+.aboutinfo h1{
+	grid-column: 2/4;
+	text-align: right;
+}
+
+.about{
+	display: grid;
+	grid-template-columns: 500px auto auto;
+}
+
+.about h2{
+	grid-column: 2/4;
+	text-align: right;
+}
+
+.about h3{
+	grid-column: 3/4;
+	font-size: 2em;
+	line-height: 0.8em;
+	text-align: right;
+	color: #E02E05;
+}
+
+
+/*------MEDIA QUERY------*/
+
+
+@media screen and (max-height: 450px){
+	.sidenav {padding-top: 15px;
+		border: 4px solid white;}
+	.sidenav a{	font-size: 12px;}
+}
+
+
+p{
+	grid-column: 2/4;
+	font-size: 30px;
+	line-height: 20px;
+	margin-top: 7em;
+}
+
+main p{
+	margin: 4em;
+}
+
+@media (max-width: 740px){
+	.container{
+		display: grid;
+		grid-template-columns: 40px auto auto;}
+
+	p{
+		grid-column: 2/4;
+		font-size: 20px;
+
+	}
+	h1{
+		font-size: 4.2em;
+		text-align: right;
+		margin-right: 10px;
+		margin-top:10px;
+	}
+	.about{
+		display:grid;
+		grid-template-columns: 60px auto auto;
+		font-size: 65%;
+	}
+	.speaker{
+		grid-column: 1/4;
+		grid-template-columns: 40px auto auto;
+		font-size: 70%;
+	}
+	.topiclist{
+		grid-column: 1/4;
+		grid-template-columns: 40px auto auto;
+		font-size: 65%;
+	}
+	.venue{
+		display: grid;
+		grid-template-columns: 80px 300px;
+	}
+	.venue h1{
+		grid-column: 1/3;
+		margin-bottom: -75px;
+	}
+	.venue h2{
+		grid-column: 1/3;
+		font-size: 2em;
+		padding: 20px;
+	}
+	.map{
+		left: 0em;
+	}
+
+	.email{
+		grid-column: 1/4;
+		grid-template-columns: 60px auto auto;
+		font-size: 65%;
+	}
+
+	.sidenav{
+		display: inline-grid;
+		margin-top: 10em;
+		margin-left: 10px;
+		grid-column: 1/4;
+		font-size: 5px;
+		
+	}
+	.sidenav a{
+		padding-bottom: 4em;
+		display: block;
+	}
+}
+
+
+@media (max-width: 1030){
+	.topiclist .speaker{
+		display: grid;
+		grid-template-columns: 100px 100px auto;
+	}
+
+}
